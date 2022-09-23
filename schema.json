@@ -193,6 +193,17 @@
         "minimum": 0.01,
         "maximum": 1
       }
+    },
+    {
+      "name": "dispositifAide",
+      "title": "Identifiant référençant le dispositif d'aide à l'origine de la subvention",
+      "description": "Identifiant unique du dispositif d'aide. Ce champ permet de connaître l'origine de la subvention en référençant les données d'aide issues du standard Dispositif d'Aide. Le champ doit respecter le format UUID",
+      "type": "string",
+      "format": "uuid",
+      "example": "65d5b6c7-102c-4440-ac3b-768f708edc0a",
+      "constraints": {
+      	"required": false
+      }
     }
   ],
   "custom_checks": [

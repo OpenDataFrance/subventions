@@ -111,14 +111,24 @@
       }
     },
     {
-      "name": "idBeneficiaire",
-      "title": "Identification du bénéficiaire",
-      "description": "Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) du bénéficiaire de la subvention, composé de 9 chiffres SIREN + 5 chiffres NIC d’un seul tenant.",
+      "name": "SIRETBeneficiaire",
+      "title": "Identification SIRET du bénéficiaire",
+      "description": "Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) du bénéficiaire de la subvention, composé de 9 chiffres SIREN + 5 chiffres NIC d’un seul tenant. Dans le cadre précis d'une subvention en nature pour une association, il est possible de ne pas renseigner de SIRET. Dans ce cas là, la valeur DEROGATION_SIRET doit être renseignée. Il faudra également renseigner le champ dispositifAide. Si cela n'est pas fait, les données ne seront pas valides.",
       "type": "string",
       "example": "38047555800058",
       "constraints": {
         "required": true,
-        "pattern": "^\\d{14}$"
+        "pattern": "^\\d{14}$|DEROGATION_SIRET"
+      }
+    },
+    {
+      "name": "RNABeneficiaire",
+      "title": "Identifiant RNA du bénéficiaire",
+      "description": "Identifiant du [répertoire national des associations](https://www.associations.gouv.fr/le-rna-repertoire-national-des-associations.html) (RNA). Chaque association est identifiée par un \"numéro RNA\" débutant par W et composé de 9 chiffres. Ce numéro est attribué automatiquement lors de la déclaration de création d’une association.  Ce champ est obligatoire dans le cadre précis d'une association bénéficiant d'une aide non numéraire et qui ne renseigne pas de SIRET. En dehors de ce cadre, il faut renseigner le SIRET du bénéficiaire dans le champ SIRETBeneficiaire.",
+      "type": "string",
+      "example": "W381017724",
+      "constraints": {
+        "pattern": "^W\\d{9}$"
       }
     },
     {

@@ -181,6 +181,16 @@
       }
     },
     {
+      "name": "idRAE",
+      "title": "Identifiant RAE de l’aide au titre de laquelle la subvention est attribuée",
+      "description": "Numéro unique de référencement dans le [Répertoire des Aides aux Entreprises](https://aides-entreprises.fr/). Ce champ ne concerne que les subventions attribuées au titre d’une aide référencée dans la [base de données du RAE](https://data.aides-entreprises.fr/documentation) gérée par l'Institut Supérieur des Métiers.",
+      "type": "string",
+      "example": "12345",
+      "constraints": {
+        "maxLength": 5
+      }
+    },
+    {
       "name": "notificationUE",
       "title": "Aide d'Etat notifiée à la Commission Européenne",
       "description": "Subvention attribuée au titre d’une aide de minimis notifiée à la Commission Européenne en vertu des dispositions du règlement n° 1407/2013 du 18 décembre 2013. Seules les valeurs 'oui' ou 'non' sont autorisées.",
@@ -207,7 +217,7 @@
     {
       "name": "dispositifAide",
       "title": "Identifiant référençant le dispositif d'aide à l'origine de la subvention",
-      "description": "Identifiant unique du dispositif d'aide. Ce champ permet de connaître l'origine de la subvention en référençant les données d'aide issues du standard Dispositif d'Aide. Le champ doit respecter le format UUID",
+      "description": "Identifiant unique du dispositif d'aide. Comme le champ idRAE, ce champ permet de connaître l'origine de l'aide. Il permet additionnelement de référençer les données d'aide issues du standard Dispositif d'Aide. Le champ doit respecter le format UUID",
       "type": "string",
       "format": "uuid",
       "example": "65d5b6c7-102c-4440-ac3b-768f708edc0a",

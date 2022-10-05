@@ -217,13 +217,9 @@
     {
       "name": "dispositifAide",
       "title": "Identifiant référençant le dispositif d'aide à l'origine de la subvention",
-      "description": "Identifiant unique du dispositif d'aide. Comme le champ idRAE, ce champ permet de connaître l'origine de l'aide. Il permet additionnelement de référençer les données d'aide issues du standard Dispositif d'Aide. Le champ doit respecter le format UUID",
+      "description": "Identifiant présent dans les données issues du [schéma des dispositifs d'aide](https://schema.data.gouv.fr/etalab/schema-dispositif-aide/). Il peut utilisé à la place de l'identifiant `idRAE` qui ne concerne que les aides aux entreprises.",
       "type": "string",
-      "format": "uuid",
-      "example": "65d5b6c7-102c-4440-ac3b-768f708edc0a",
-      "constraints": {
-      	"required": false
-      }
+      "example": "65d5b6c7-102c-4440-ac3b-768f708edc0a"
     }
   ],
   "custom_checks": [

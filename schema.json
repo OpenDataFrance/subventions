@@ -119,7 +119,7 @@
     {
       "name": "idBeneficiaire",
       "title": "Identification SIRET du bénéficiaire",
-      "description": "Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) du bénéficiaire de la subvention, composé de 9 chiffres SIREN + 5 chiffres NIC d’un seul tenant. Dans le cadre précis d'une subvention en nature pour une association, il est possible de ne pas renseigner de SIRET. Dans ce cas là, la valeur DEROGATION_SIRET doit être renseignée. Il faudra également renseigner le champ RNABeneficiaire.",
+      "description": "Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) du bénéficiaire de la subvention, composé de 9 chiffres SIREN + 5 chiffres NIC d’un seul tenant. Dans le cadre précis d'une subvention en nature pour une association, il est possible de ne pas renseigner de SIRET. Il faudra alors renseigner le champ rnaBeneficiaire.",
       "type": "string",
       "example": "38047555800058",
       "constraints": {

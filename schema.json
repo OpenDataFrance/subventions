@@ -59,6 +59,12 @@
       "organisation": "multi",
       "email": "johan.richer@multi.coop",
       "role": "contributor"
+    },
+    {
+      "title": "Amélie Rondot",
+      "organisation": "multi",
+      "email": "amelie.rondot@multi.coop",
+      "role": "contributor"
     }
   ],
   "fields": [
@@ -117,18 +123,17 @@
       "type": "string",
       "example": "38047555800058",
       "constraints": {
-        "required": true,
-        "pattern": "^\\d{14}$|DEROGATION_SIRET"
+        "pattern": "^\\d{14}$"
       }
     },
     {
       "name": "rnaBeneficiaire",
-      "title": "Identifiant RNA du bénéficiaire",
-      "description": "Identifiant du [répertoire national des associations](https://www.associations.gouv.fr/le-rna-repertoire-national-des-associations.html) (RNA). Chaque association est identifiée par un \"numéro RNA\" débutant par W et composé de 9 chiffres. Ce numéro est attribué automatiquement lors de la déclaration de création d’une association.  Ce champ est obligatoire dans le cadre précis d'une association bénéficiant d'une aide non numéraire et qui ne renseigne pas de SIRET. En dehors de ce cadre, il faut renseigner le SIRET du bénéficiaire dans le champ SIRETBeneficiaire.",
+      "title": "Identification RNA du bénéficiaire",
+      "description": "Numéro d'identification RNA [Répertoire National des Associations](https://associations.gouv.fr/le-rna-repertoire-national-des-associations.html) du bénéficiaire de la subvention, débutant par 'W' et composé de 9 chiffres",
       "type": "string",
-      "example": "W381017724",
+      "example": "W380475558",
       "constraints": {
-        "pattern": "^W\\d{9}$"
+        "pattern": "W\\d{9}$"
       }
     },
     {
@@ -243,6 +248,13 @@
       "name": "french-siret-value",
       "params": {
         "column": "idBeneficiaire"
+      }
+    },
+    {
+      "name": "one-of-required",
+      "params": {
+        "column1": "idBeneficiaire",
+        "column2": "rnaBeneficiaire"
       }
     }
   ]

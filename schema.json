@@ -130,7 +130,7 @@
       "type": "string",
       "example": "W380475558",
       "constraints": {
-        "pattern": "W\\d{9}$"
+        "pattern": "^W\\d{9}$"
       }
     },
     {

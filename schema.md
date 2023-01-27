@@ -82,7 +82,7 @@ Ce modèle de données repose sur les 16 champs suivants correspondant aux colon
 - description : Numéro d'identification RNA [Répertoire National des Associations](https://associations.gouv.fr/le-rna-repertoire-national-des-associations.html) du bénéficiaire de la subvention, débutant par 'W' et composé de 9 chiffres
 - type : chaîne de caractères
 - exemple : `W380475558`
-- motif : `W\d{9}$`
+- motif : `^W\d{9}$`
 
 ### `objet`
 
